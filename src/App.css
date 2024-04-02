@@ -1,38 +1,69 @@
+/* src/App.css */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Full viewport height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #282c34; /* Darker background for modern look */
+  color: #61dafb; /* React default blue for a touch of brand */
+  text-align: center;
 }
 
-.App-link {
+.Display {
+  background-color: #20232a;
   color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 3em; /* Larger font for better visibility */
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+button {
+  background-color: #61dafb; /* Matching the display color */
+  color: #20232a;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: transparent;
+  color: #61dafb;
+  border-color: #61dafb;
+}
+
+.LapList {
+  width: 100%;
+  padding: 0;
+  list-style-type: none; /* Remove default list styling */
+  overflow-y: auto; /* Allows scrolling for long lists */
+  max-height: 200px; /* Fixed height for scrollable list */
+}
+
+.LapList li {
+  background-color: #61dafb;
+  color: #20232a;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.LapList li:hover {
+  background-color: #4fa8d8; /* Slightly lighter blue on hover */
 }
